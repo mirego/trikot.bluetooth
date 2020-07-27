@@ -3,7 +3,7 @@ import CoreBluetooth
 import Dispatch
 
 public class TrikotBluetoothManager: NSObject, BluetoothManager, CBCentralManagerDelegate {
-    private let dispatchQueue = DispatchQueue.global(qos: .background)
+    private let dispatchQueue = DispatchQueue(label: "bluetooth-serial", qos: .background)
     private lazy var centralManager = CBCentralManager(delegate: self, queue: dispatchQueue)
 
     private let scanResultpublisher = frozenBehaviorSubject()
