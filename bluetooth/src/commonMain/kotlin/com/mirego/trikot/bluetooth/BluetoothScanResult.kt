@@ -4,7 +4,7 @@ import com.mirego.trikot.streams.cancellable.CancellableManager
 import org.reactivestreams.Publisher
 
 interface BluetoothScanResult {
-    val name: String
+    val name: String?
 
     val physicalAddress: String
 
