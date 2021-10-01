@@ -10,7 +10,7 @@ class TrikotBluetoothScanResult: NSObject, BluetoothScanResult {
 
     var bluetoothDevice: TrikotBluetoothDevice?
 
-    var name: String
+    var name: String?
 
     var physicalAddress: String
 
